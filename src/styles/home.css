@@ -1,0 +1,15 @@
+.home-content {
+  @apply h-96 grid place-content-center;
+}
+
+.header {
+  @apply max-w-4xl text-center;
+}
+
+.header-title {
+  @apply flex text-6xl p-4 m-2 font-bold;
+}
+
+.btn-shopping {
+  @apply px-4 py-2 m-4 rounded border border-black shadow-lg text-xl font-medium bg-burnt-sienna hover:bg-burnt-sienna/90;
+}

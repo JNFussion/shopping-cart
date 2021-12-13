@@ -15,3 +15,7 @@
     @apply font-sans bg-slate-100;
   }
 }
+
+.trans-hover {
+  @apply transition-all duration-200 ease-in;
+}
