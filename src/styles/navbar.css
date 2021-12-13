@@ -1,0 +1,19 @@
+.nav {
+  @apply flex items-center shadow-lg shadow-charcoal/25  text-white bg-charcoal;
+}
+
+.logo-container {
+  @apply mx-24 py-2 px-4 bg-sandy-brown;
+}
+
+.logo {
+  @apply font-display text-5xl -skew-x-12;
+}
+
+.nav-links {
+  @apply w-2/5 flex justify-evenly;
+}
+
+.cart-container {
+  @apply ml-auto mr-16 p-2  text-2xl text-orange-yellow-crayola;
+}
