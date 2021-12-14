@@ -1,0 +1,19 @@
+.product-simple {
+  @apply rounded-md border border-b-2 border-solid border-persian-green shadow-xl;
+}
+
+.product-simple .info {
+  @apply h-32 px-4 py-2  grid grid-cols-4 grid-rows-2 bg-zinc-200;
+}
+
+.product-simple .title {
+  @apply col-span-full font-semibold text-2xl;
+}
+
+.product-simple .price {
+  @apply self-center font-black text-lg text-burnt-sienna;
+}
+
+.btn-add-to-cart {
+  @apply m-2 flex items-center col-start-3 col-end-5;
+}

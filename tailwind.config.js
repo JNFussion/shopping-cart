@@ -13,6 +13,9 @@ module.exports = {
         sans: ["Roboto", "sans-serif"],
         display: ["Righteous", "cursive"],
       },
+      gridTemplateColumns: {
+        auto: "repeat(auto-fill, minmax(250px,1fr))",
+      },
     },
   },
   plugins: [],
