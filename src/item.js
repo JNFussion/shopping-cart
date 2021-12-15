@@ -1,5 +1,14 @@
 class Item {
-  constructor(id, name, titleName, price, department, color, material) {
+  constructor(
+    id,
+    name,
+    titleName,
+    price,
+    department,
+    color,
+    material,
+    description
+  ) {
     this.id = id;
     this.titleName = titleName;
     this.name = name;
@@ -7,6 +16,7 @@ class Item {
     this.department = department;
     this.color = color;
     this.material = material;
+    this.description = description;
   }
 }
 
