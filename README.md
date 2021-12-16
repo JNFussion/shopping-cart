@@ -6,6 +6,7 @@ This project is from [The odin project's JavaScript course.](https://www.theodin
 
 The app consist in 3 pages. A home page, a shopping page, where you find 8 items that you can add to the shopping cart and lastly a shopping cart page where you find all items added.
 
+The page is hosted on github pages. Home page won't show right away, you need to click on the navbar link to display it. If you reload, it will show a 404 error.
 If you wanna see it, click [here](https://jnfussion.github.io/shopping-cart/).
 
 ## Resources

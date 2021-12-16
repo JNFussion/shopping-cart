@@ -65,7 +65,7 @@ const App = function App() {
     <BrowserRouter>
       <Navbar list={cartItems} dispatchCart={dispatch} />
       <Routes>
-        <Route path="/shoping-cart" element={<Home />} />
+        <Route path="/shoping-cart/" element={<Home />} />
 
         <Route
           path="/shoping-cart/shop"
