@@ -146,7 +146,7 @@ const Product = function Product({ onList, product }) {
             onClick={handleSubmit}
           >
             <Link
-              to="/cart"
+              to="/shoping-cart/cart"
               state={{ product: targetProduct, units }}
               className="flex items-center"
             >

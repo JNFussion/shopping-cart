@@ -65,19 +65,19 @@ const App = function App() {
     <BrowserRouter>
       <Navbar list={cartItems} dispatchCart={dispatch} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/shoping-cart" element={<Home />} />
 
         <Route
-          path="/shop"
+          path="/shoping-cart/shop"
           element={
             <DispatchContext.Provider value={dispatch}>
               <Shop productList={productList} />
             </DispatchContext.Provider>
           }
         />
-        <Route path="/shop/:name" element={<Product />} />
+        <Route path="/shoping-cart/shop/:name" element={<Product />} />
         <Route
-          path="/cart"
+          path="/shoping-cart/cart"
           element={<Cart list={cartItems} dispatchCart={dispatch} />}
         />
       </Routes>

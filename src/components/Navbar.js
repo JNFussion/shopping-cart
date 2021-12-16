@@ -15,13 +15,13 @@ const Navbar = function Navbar({ list, dispatchCart }) {
     <nav className="nav">
       <Logo />
       <ul className="nav-links">
-        <Link to="/">
+        <Link to="/shoping-cart">
           <li>Home</li>
         </Link>
-        <Link to="/shop">
+        <Link to="/shoping-cart/shop">
           <li>Shop</li>
         </Link>
-        <Link to="/cart">
+        <Link to="/shoping-cart/cart">
           <li>Cart</li>
         </Link>
       </ul>
