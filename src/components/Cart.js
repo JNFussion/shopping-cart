@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import faker from "faker";
@@ -6,7 +7,6 @@ import { useLocation } from "react-router-dom";
 
 function getSubtotal(list) {
   return list.reduce((sum, i) => {
-    // eslint-disable-next-line no-param-reassign
     sum += parseInt(i.product.price.slice(1), 10) * 0.79 * i.quantity;
     return sum;
   }, 0);
@@ -14,7 +14,6 @@ function getSubtotal(list) {
 
 function getTaxes(list) {
   return list.reduce((sum, i) => {
-    // eslint-disable-next-line no-param-reassign
     sum += parseInt(i.product.price.slice(1), 10) * 0.21 * i.quantity;
     return sum;
   }, 0);
@@ -120,6 +119,13 @@ const Cart = function Cart({ isNav, list, dispatchCart }) {
           <div className="font-bold ">
             {list.length ? formatter.format(getTotal(list)) : "0"}€
           </div>
+        </div>
+      )}
+      {!isNav && (
+        <div className="w-fit ml-auto p-4">
+          <button type="button" className="btn-shopping">
+            Checkout
+          </button>
         </div>
       )}
     </article>
