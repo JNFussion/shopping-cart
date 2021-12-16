@@ -1,11 +1,12 @@
 /* eslint-disable react/require-default-props */
 import PropTypes from "prop-types";
-import React, { useReducer } from "react";
+import React, { useContext, useReducer } from "react";
 import faker from "faker";
 import { FaShoppingCart } from "react-icons/fa";
 import "../styles/product.css";
 import { Link, useLocation } from "react-router-dom";
 import Item from "../item";
+import DispatchContext from "../context";
 
 function simpleProduct(p, dispatchCart) {
   return (
@@ -25,7 +26,9 @@ function simpleProduct(p, dispatchCart) {
         <button
           type="button"
           className="btn-shopping btn-add-to-cart"
-          onClick={() => dispatchCart({ type: "add", product: p, quantity: 1 })}
+          onClick={() => {
+            dispatchCart({ type: "add", product: p, quantity: 1 });
+          }}
         >
           <span>Add to</span>
           <span>
@@ -61,10 +64,11 @@ function handleSubmit(e) {
   e.preventDefault();
 }
 
-const Product = function Product({ onList, product, dispatchCart }) {
+const Product = function Product({ onList, product }) {
   const data = useLocation();
   const targetProduct = data.state;
   const [units, dispatch] = useReducer(reducer, 1);
+  const dispatchCart = useContext(DispatchContext);
 
   return onList ? (
     simpleProduct(product, dispatchCart)
@@ -163,7 +167,6 @@ const Product = function Product({ onList, product, dispatchCart }) {
 Product.propTypes = {
   onList: PropTypes.bool,
   product: PropTypes.instanceOf(Item),
-  dispatchCart: PropTypes.func.isRequired,
 };
 
 export default Product;

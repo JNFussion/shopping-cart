@@ -8,10 +8,21 @@ import Navbar from "./components/Navbar";
 import Product from "./components/Product";
 import Shop from "./components/Shop";
 import Item from "./item";
+import DispatchContext from "./context";
 
 function reducer(state, { type, id, product, quantity }) {
   switch (type) {
     case "add":
+      if (state.find((i) => i.product.id === product.id)) {
+        return state.map((i) => {
+          if (i.product.id === product.id) {
+            // eslint-disable-next-line no-param-reassign
+            return { product: i.product, quantity: i.quantity + quantity };
+          }
+          return i;
+        });
+      }
+
       return [...state, { product, quantity }];
     case "remove":
       return state.filter((i) => i.product.id !== id);
@@ -55,9 +66,14 @@ const App = function App() {
       <Navbar list={cartItems} dispatchCart={dispatch} />
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route
           path="/shop"
-          element={<Shop productList={productList} dispatchCart={dispatch} />}
+          element={
+            <DispatchContext.Provider value={dispatch}>
+              <Shop productList={productList} />
+            </DispatchContext.Provider>
+          }
         />
         <Route path="/shop/:name" element={<Product />} />
         <Route
