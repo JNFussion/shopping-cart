@@ -10,7 +10,7 @@ const Home = function Home() {
         <h1 className="header-title">
           <span className="italic">Welcome to</span> <Logo />
         </h1>
-        <h2>
+        <h2 className="flex flex-wrap items-center justify-center">
           <Link to="/shop" className="trans-hover btn-shopping m-4">
             Go shopping
           </Link>

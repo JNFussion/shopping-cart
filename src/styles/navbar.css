@@ -7,9 +7,9 @@
 }
 
 .cart-container {
-  @apply ml-auto mr-16;
+  @apply ml-auto md:mx-10 lg:mr-16;
 }
 
 .btn-cart {
-  @apply p-2 text-2xl text-orange-yellow-crayola hover:text-orange-yellow-crayola/80;
+  @apply p-2 text-lg sm:text-2xl text-orange-yellow-crayola hover:text-orange-yellow-crayola/80;
 }

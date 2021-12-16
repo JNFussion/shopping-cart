@@ -36,7 +36,7 @@ const Navbar = function Navbar({ list, dispatchCart }) {
       </div>
       <div
         id="cart-container"
-        className="fixed right-4 top-20 w-72 border bg-white text-black"
+        className="hidden z-50 fixed right-4 top-20 w-72 border bg-white text-black"
       >
         <Cart isNav list={list} dispatchCart={dispatchCart} />
       </div>
